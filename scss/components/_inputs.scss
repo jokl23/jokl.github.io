@@ -1,0 +1,59 @@
+#city{
+  position: relative;
+
+  &:after {
+    content: '\f00d ';
+    color: $primary-color;
+    font: normal normal normal 18px/1 FontAwesome;
+    transition: color $default-transition;
+    transform: translateY(-50%);
+
+    position: absolute;
+    top: 30%;
+    right: 0px;
+
+    @extend .db;
+    @extend .backspace;
+  }
+  &:hover:after {
+    color: $primary-color;
+    cursor: pointer;
+  }
+}
+input{
+  width: 100%;
+  color: $default-color;
+  font-family: $default-font!important;
+  font-size: $f16px;
+  font-weight: $regular;
+  line-height: 1.15;
+  padding: 10px 0;
+  border-bottom: 1px solid $gray;
+  @extend .tl;
+
+  &:focus {
+    border-color: $primary-color;
+  }
+
+  //Alerts | Disabled
+  //Success
+  &.success {
+    border-color: $success !important;
+  }
+
+  //Error
+  &.error {
+    border-color: $error !important;
+  }
+
+  //Disabled
+  &:disabled {
+    cursor: auto;
+  }
+}
+
+//Placeholder color
+::-webkit-input-placeholder {font-weight: $medium;}
+::-moz-placeholder          {font-weight: $medium;}
+:-moz-placeholder           {font-weight: $medium;}
+:-ms-input-placeholder      {font-weight: $medium;}

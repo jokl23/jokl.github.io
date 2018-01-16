@@ -1,0 +1,62 @@
+.footer {
+  padding: 10px 0 30px;
+  color: $medium-gray;
+
+  .panel-info{
+    ul{
+      @extend .df;
+
+      li{
+        position: relative;
+        padding: 0 45px 0 0;
+
+        & > a{
+          height: 100%;
+          padding: 30px 0;
+          position: relative;
+          transition: all $default-transition;
+          font-size: $f14px;
+          font-weight: $medium;
+          letter-spacing: 0.5px;
+
+          @extend .df;
+          @extend .ai-center;
+        }
+      }
+    }
+  }
+
+  .panel-copy{
+    font-size: $f12px;
+    font-weight: $regular;
+    letter-spacing: 0.5px;
+  }
+}
+//Responsive
+
+@media screen and (min-width: 0) and (max-width: #{$screen-xs-max} ) {
+  .footer {
+    padding: 30px 0 30px;
+
+    .panel-info{
+      ul{
+        flex-direction: column;
+        justify-content: center;
+
+        li{
+          padding: 0;
+
+          & > a{
+            justify-content: center;
+            padding: 15px 0;
+          }
+        }
+      }
+    }
+
+    .panel-copy{
+      margin-top: 25px;
+      text-align: center;
+    }
+  }
+}
