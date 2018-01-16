@@ -1,0 +1,64 @@
+html, body {
+  -webkit-overflow-scrolling : touch;
+  height: 100%;
+}
+html {
+  overflow-y: scroll;
+
+  @extend .box-sizing;
+}
+body {
+  padding: 0 !important;
+  position: relative;
+
+  @extend .df-c;
+}
+*:not(img) {
+  outline: none;
+
+  margin: 0;
+  padding: 0;
+
+  @extend .box-sizing;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+section {
+  position: relative;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img, object, embed {
+  max-width: 100%;
+}
+a,
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: color $default-transition;
+}
+a:hover {
+  color: $primary-color;
+}
+fieldset {
+  border: none;
+}
+input,
+input[type="search"],
+textarea,
+button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all $default-transition;
+}

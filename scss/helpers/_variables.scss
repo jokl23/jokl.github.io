@@ -1,0 +1,88 @@
+//Fonts
+$default-font: 'Roboto', sans-serif;
+
+//Font weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+//Font size
+$f8px: 0.55em;
+$f10px: 0.625em;
+$f12px: 0.750em;
+$f13px: 0.813em;
+$f14px: 0.875em;
+$f16px: 1em;
+$f18px: 1.125em;
+$f20px: 1.250em;
+$f24px: 1.500em;
+$f30px: 1.875em;
+$f35px: 2.188em;
+$f40px: 2.500em;
+$f45px: 2.813em;
+$f50px: 3.125em;
+$f70px: 4.375em;
+$f90px: 5.625em;
+$f115px: 7.188em;
+$f120px: 7.500em;
+$f180px: 11.25em;
+
+//Colors
+$default-color: #333333;
+$primary-color: #366cf7;
+$secondary-color: #4a8bfe;
+$light-blue: #78a1fc;
+$white: #fff;
+$black: #000;
+$light-black: #292929;
+$medium-black: #131313;
+$pink: #ff1e6c;
+$gray: #dcdcdc;
+$thin-gray: #f0f0f0;
+$light-gray: #e7e7e7;
+$medium-gray: #747474;
+$dark-gray: #969696;
+$light-green: #01f501;
+$success: #b1d845;
+$error: #e41c1c;
+$gold: #f9fb00;
+
+
+
+//Colors - RGB
+$white-rgb: 255,255,255;
+$black-rgb: 000,000,000;
+
+//Transition
+$default-transition: 0.2s ease-in-out;
+$t01s-transition: 0.1s ease-in-out;
+
+//Responsive
+$screen-zero: 0;
+$screen-zero-max: 479px;
+$screen-xs-min: 480px;
+$screen-xs-max: 767px;
+// --- Tablets
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+// --- Laptops
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+// --- Desktops
+$screen-lg-min: 1200px;
+
+//Header height (mobile)
+$header-height: 65px;
+
+//Container
+// --- Max container width
+$container-max: 1170px;
+// --- Container padding (mobile)
+$container-padding: 20px;
+
+//Border radius
+$default-radius: 5px;

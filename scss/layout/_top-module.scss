@@ -1,0 +1,66 @@
+.top-persons{
+  background: $thin-gray;
+  padding: 18px 0 8px;
+
+  .items {
+    @extend .df;
+    @extend .df-wrap;
+    @extend .jc-space-between;
+
+    //Default
+    .item {
+
+      //Media
+      .image{
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+
+        a {
+          transition: opacity $default-transition;
+
+          @extend .link-block;
+          &:hover {
+            opacity: 0.75;
+          }
+
+          .img{
+            width: 136px;
+            height: 136px;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+//Responsive
+@media screen and (min-width: #{$screen-md-min} ) and (max-width: #{$screen-md-max} ){
+  .top-persons{
+    .items{
+      .item{
+        .image{
+          a{
+            .img{
+              width: 114px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: #{$screen-zero} ) and (max-width: #{$screen-sm-max} ){
+  .top-persons{
+    .items{
+      justify-content: space-evenly;
+    }
+  }
+}

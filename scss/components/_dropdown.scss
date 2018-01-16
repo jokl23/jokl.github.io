@@ -1,0 +1,132 @@
+//Default
+.default-dropdown {
+  color: $default-color;
+  font-size: $f16px;
+  font-weight: $medium;
+  width: 100%;
+  max-width: 215px;
+
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+  .c-dropdown {
+    //z-index: 2;
+    position: relative;
+
+    &, & * {
+      width: 100%;
+    }
+  }
+  .js-dropdown_current,
+  .c-dropdown_item {
+    transition: background $default-transition, color $default-transition;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .c-dropdown_list {
+    background: $white;
+    //border-bottom: 1px solid $light-gray;
+    transition: opacity $default-transition, transform $default-transition;
+    will-change: transofrm;
+    transform: translateY(10px);
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    @extend .pe-none;
+  }
+  .c-dropdown.is-open .c-dropdown_list {
+    transform: translateY(0);
+    opacity: 1;
+
+    z-index: 2;
+
+    @extend .pe-auto;
+  }
+  .c-button,
+  .c-dropdown_item {
+    cursor: pointer;
+  }
+  .c-button-dropdown {
+    border-bottom: 1px solid $gray;
+    color: $default-color;
+
+
+    &:after {
+      content: '\f107';
+      color: $primary-color;
+      font: normal normal normal 18px/1 FontAwesome;
+      transition: color $default-transition;
+      transform: translateY(-50%);
+
+      position: absolute;
+      top: 50%;
+      right: 0px;
+
+      @extend .db;
+      @extend .backspace;
+    }
+    &:hover:after {
+      color: $primary-color;
+    }
+  }
+  .c-dropdown_item {
+    border-bottom: 1px solid $light-gray;
+    padding: 10px;
+    transition: all $default-transition;
+
+    &:last-child {
+      //border-bottom: 0;
+    }
+    &:hover {
+      //color: $white;
+      border-color: $primary-color;
+      transition: all $default-transition;
+    }
+  }
+
+  @extend .tl;
+}
+
+//Form dropdown
+.default-dropdown.form-dropdown {
+  font-size: $f16px;
+  max-width: none;
+  margin-right: 0;
+
+  .c-button-dropdown {
+    color: $default-color;
+    font-size: $f16px;
+    font-weight: $regular;
+    line-height: 1.15;
+    padding: 10px 0;
+    @extend .tl;
+  }
+  .c-dropdown_list {
+    //background: lighten($light-gray, 5%);
+    flex-wrap: wrap;
+    height: auto;
+
+    li {
+      padding: 10px 0;
+
+      @extend .jc-center;
+      @extend .tl;
+
+      &:not(:last-child) {
+
+      }
+    }
+  }
+}
+
+//Responsive - Default dropdown
+@media screen and (min-width: #{$screen-zero} ) and (max-width: #{$screen-xs-max} ) {
+  .default-dropdown {
+
+  }
+}

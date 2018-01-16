@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>JuliaDates</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="image/icons/favicon.ico" type="images/x-icon" />
+    <!-- Bootstrap's grid -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Fonts -->
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic-ext" rel="stylesheet">
+
+    <!-- ION Range slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/css/ion.rangeSlider.skinNice.min.css" />
+
+    <!-- Main -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="image/logo/main-logo.png" alt="Logo">
+                </a>
+            </div><!-- .logo - END -->
+
+            <!-- Menu toggle for small device -->
+            <button type="button" class="menu-toggle hidden-lg hidden-md">
+                <span>
+                    <span class="top db item"></span>
+                    <span class="middle db item"></span>
+                    <span class="bottom db item"></span>
+                </span>
+            </button><!-- .menu-toggle - END -->
+
+            <div class="close-panel"></div><!-- .close-panel - END -->
+
+            <nav class="menu">
+                <ul class="list-unstyled">
+                    <li><a href="#">Поиск</a></li>
+                    <li><a href="#">Мои переписки</a></li>
+                    <li><a href="#">Избранное</a></li>
+                    <li><a href="#">Кто смотрел</a></li>
+                </ul>
+            </nav><!-- .menu - END -->
+
+            <div class="toolbar">
+                <div class="status item">
+                    <span class="text">Премиум</span>
+                    <span class="info-icon"></span>
+                </div><!-- .status - END -->
+
+                <div class="remainder item">100 кредитов</div><!-- .remainder - END -->
+
+                <div class="user-toggle item">
+                    <span class="avatar-sm" style='background-image: url("image/profiles/avatar-sm.jpg")'><!-- wil be background-url --></span>
+                    <span class="user-toggle-icon fa fa-angle-down"></span>
+
+                    <div class="user-panel">
+                        There is some information here
+                    </div><!-- .user-panel - END -->
+                </div><!-- .user-toggle - END -->
+            </div><!-- .toolbar - END -->
+        </div><!-- .container - END -->
+    </header><!-- .header - END -->
+
+    <section class="top-persons">
+        <div class="container">
+            <div class="items">
+                <div class="item">
+                    <div class="image">
+                        <a href="">
+                            <div class="img" style='background-image: url("image/profiles/photo002.jpg")'></div>
+                        </a>
+                    </div><!-- .image - END-->
+                </div><!-- .item - END-->
+                <div class="item">
+                    <div class="image">
+                        <a href="">
+                            <div class="img" style='background-image: url("image/profiles/photo003.jpg")'></div>
+                        </a>
+                    </div><!-- .image - END-->
+                </div><!-- .item - END-->
+                <div class="item">
+                    <div class="image">
+                        <a href="">
+                            <div class="img" style='background-image: url("image/profiles/photo004.jpg")'></div>
+                        </a>
+                    </div><!-- .image - END-->
+                </div><!-- .item - END-->
+                <div class="item">
+                    <div class="image">
+                        <a href="">
+                            <div class="img" style='background-image: url("image/profiles/photo005.jpg")'></div>
+                        </a>
+                    </div><!-- .image - END-->
+                </div><!-- .item - END-->
+                <div class="item">
+                    <div class="image">
+                        <a href="">
+                            <div class="img" style='background-image: url("image/profiles/photo006.jpg")'></div>
+                        </a>
+                    </div><!-- .image - END-->
+                </div><!-- .item - END-->
+                <div class="item">
+                    <div class="image">
+                        <a href="">
+                            <div class="img" style='background-image: url("image/profiles/photo007.jpg")'></div>
+                        </a>
+                    </div><!-- .image - END-->
+                </div><!-- .item - END-->
+                <div class="item">
+                    <div class="image">
+                        <a href="">
+                            <div class="img" style='background-image: url("image/profiles/photo008.jpg")'></div>
+                        </a>
+                    </div><!-- .image - END-->
+                </div><!-- .item - END-->
+                <div class="item">
+                    <div class="image">
+                        <a href="">
+                            <div class="img" style='background-image: url("image/profiles/photo009.jpg")'></div>
+                        </a>
+                    </div><!-- .image - END-->
+                </div><!-- .item - END-->
+            </div><!-- .items - END-->
+        </div><!-- .container - END -->
+    </section><!-- .top-persons - END -->
+
+    <section class="filters">
+        <div class="container">
+            <h2 class="filter-heading">Я ищу</h2>
+            <div class="filter-box">
+                <div id="filter-data" class="filter-content">
+                    <div id="sex" class="">
+                        <div class="default-dropdown form-dropdown">
+                            <div class="c-dropdown js-dropdown">
+                                <input type="hidden" name="sex" class="js-dropdown_input" value="Девушка">
+                                <span class="c-button c-button-dropdown js-dropdown_current cs dib">Пол</span>
+                                <ul class="c-dropdown_list">
+                                    <li class="c-dropdown_item nw" data-dropdown-value="Девушку">Девушку</li>
+                                    <li class="c-dropdown_item nw" data-dropdown-value="Парня">Парня</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- #sex - END -->
+
+                    <div id="city" class="">
+                        <input type="text" name="city" placeholder="Город" value="Санкт-Петербург">
+                    </div><!-- #city - END -->
+
+                    <div id="age" class="">
+                        <div class="age-range">
+                            <span class="age-text">Возраст</span>
+                            <div class="range-slider">
+                                <input type="text" id="range1" name="range-age" value="" />
+                            </div><!-- .range-slider - END -->
+                        </div>
+                    </div><!-- #age - END -->
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-find">Найти</button>
+                    </div><!-- .btn-group - END -->
+                </div><!-- #filter-data - END -->
+            </div><!-- .filter-box - END -->
+        </div><!-- .container - END -->
+
+        <div class="filter-advanced text-center">
+            <h4 class="heading">Расширенный поиск <i class="fa fa-angle-down"></i></h4>
+            <span class="filter-toggle-icon"></span>
+        </div><!-- .filter-advanced - END -->
+    </section><!-- .filters - END -->
+
+    <section class="profiles">
+        <div class="container">
+            <div class="filter-view">
+                <div class="btn-group">
+                    <button type="button" id="list-online" class="btn btn-list">Онлайн</button>
+                    <button type="button" id="list-new" class="btn btn-list active">Новые</button>
+                    <button type="button" id="list-popular" class="btn btn-list">Популярные</button>
+                </div>
+            </div><!-- .filter-view - END -->
+
+            <div id="page-1" class="items row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online popular">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo001.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>12</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Кристиночка, 28 <span class="online-icon"></span></div>
+                            <div class="city">Санкт-Петербург, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online popular">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo010.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>3</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Диана, 20 <span class="online-icon"></span></div>
+                            <div class="city">Самара, Россия</div>
+                        </div><!-- .info - END-->
+                    </div>
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online popular">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo011.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>145</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Аня, 18 <span class="online-icon"></span></div>
+                            <div class="city">Ростов-на-Дону, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo013.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>17</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Анжелика, 27 <span class="online-icon"></span></div>
+                            <div class="city">Чебоксары, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo014.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>12</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist active" type="button"><i class="fa fa-star"></i> <span class="">В избранных</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Лариса, 32 <span class="online-icon"></span></div>
+                            <div class="city">Москва, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo015.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>12</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Настя, 21 <span class="online-icon"></span></div>
+                            <div class="city">Зеленоград, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo016.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>4</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Евгения, 30 <span class="online-icon"></span></div>
+                            <div class="city">Ростов-на-Дону, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo017.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>28</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Ольга, 25 <span class="online-icon"></span></div>
+                            <div class="city">Казань, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+            </div><!-- .items 1 - END-->
+            <div id="page-2" class="items row" style="display:none;">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo017.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>28</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Ольга, 25 <span class="online-icon"></span></div>
+                            <div class="city">Казань, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online popular">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo011.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>12</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Кристиночка, 28 <span class="online-icon"></span></div>
+                            <div class="city">Санкт-Петербург, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo015.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>12</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Настя, 21 <span class="online-icon"></span></div>
+                            <div class="city">Зеленоград, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo016.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>4</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Евгения, 30 <span class="online-icon"></span></div>
+                            <div class="city">Ростов-на-Дону, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online popular">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo012.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>145</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Аня, 18 <span class="online-icon"></span></div>
+                            <div class="city">Ростов-на-Дону, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo013.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>17</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Анжелика, 27 <span class="online-icon"></span></div>
+                            <div class="city">Чебоксары, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo011.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>12</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist active" type="button"><i class="fa fa-star"></i> <span class="">В избранных</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Лариса, 32 <span class="online-icon"></span></div>
+                            <div class="city">Москва, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online popular">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo001.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>3</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Диана, 20 <span class="online-icon"></span></div>
+                            <div class="city">Самара, Россия</div>
+                        </div><!-- .info - END-->
+                    </div>
+                </div><!-- item - END-->
+            </div><!-- .items 2 - END-->
+            <div id="page-3" class="items row" style="display:none;">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online popular">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo012.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>145</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Аня, 18 <span class="online-icon"></span></div>
+                            <div class="city">Ростов-на-Дону, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo013.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>17</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Анжелика, 27 <span class="online-icon"></span></div>
+                            <div class="city">Чебоксары, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo017.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>28</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Ольга, 25 <span class="online-icon"></span></div>
+                            <div class="city">Казань, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online popular">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo011.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>12</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Кристиночка, 28 <span class="online-icon"></span></div>
+                            <div class="city">Санкт-Петербург, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo011.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>12</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist active" type="button"><i class="fa fa-star"></i> <span class="">В избранных</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Лариса, 32 <span class="online-icon"></span></div>
+                            <div class="city">Москва, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item online popular">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo001.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>3</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Диана, 20 <span class="online-icon"></span></div>
+                            <div class="city">Самара, Россия</div>
+                        </div><!-- .info - END-->
+                    </div>
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo015.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>12</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Настя, 21 <span class="online-icon"></span></div>
+                            <div class="city">Зеленоград, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="image">
+                            <a href="#" class="link">
+                                <div class="img" style='background-image: url("image/profiles/photo016.jpg")'></div>
+                            </a>
+                            <div class="sticker-qnt"><i class="fa fa-camera"></i> <span>4</span></div><!-- .sticker-qnt - END -->
+                            <div class="sticker-top"><span>ТОП</span></div><!-- .sticker-top - END -->
+                        </div><!-- .image - END -->
+
+                        <div class="button-group">
+                            <button class="btn btn-wishlist" type="button"><i class="fa fa-star-o"></i> <span class="">Избранное</span></button>
+                            <button class="btn btn-text" type="button"><i class="fa fa-envelope-o"></i> <span class="">Написать</span></button>
+                        </div><!-- .button-group - END-->
+
+                        <div class="info">
+                            <div class="name">Евгения, 30 <span class="online-icon"></span></div>
+                            <div class="city">Ростов-на-Дону, Россия</div>
+                        </div><!-- .info - END-->
+                    </div><!-- .item - END-->
+                </div><!-- item - END-->
+            </div><!-- .items 2 - END-->
+
+            <div class="page-nav text-center">
+                <ul class="pagination">
+                    <li class="prev"><a href="1"><i class="fa fa-angle-left"></i></a></li>
+                    <li class="active"><a href="1">1</a></li>
+                    <li><a href="2">2</a></li>
+                    <li><a href="3">3</a></li>
+                    <li><a href="1">4</a></li>
+                    <li><a href="2">5</a></li>
+                    <li><a href="3">6</a></li>
+                    <li class="next"><a href="3"><i class="fa fa-angle-right"></i></a></li>
+                </ul><!-- .pagination - END-->
+            </div><!-- .page-nav - END-->
+        </div><!-- .container - END -->
+    </section><!-- .profiles - END -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="panel-info">
+                <ul class="list-unstyled">
+                    <li><a href="">Правила</a></li>
+                    <li><a href="">Пользовательское соглашение</a></li>
+                    <li><a href="">О проекте</a></li>
+                    <li><a href="">Обратная связь</a></li>
+                </ul>
+            </div>
+            <div class="panel-copy">
+                ©«KIKI». Лучший on-line сервис по поиску спонсоров и содержанок, 2015-2017 <br>
+                Администрация не несёт ответственности за размещённые анкеты. Вся информация на сайте предоставлена посетителями.
+            </div>
+        </div>
+    </footer><!-- .footer - END -->
+
+    <a href="#" class="goto-top">
+        <img src="image/icons/arrow-up.png" alt="Go to top">
+    </a><!-- .goto-top - END -->
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- ION Range slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/js/ion.rangeSlider.min.js"></script>
+    <!-- Main -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>

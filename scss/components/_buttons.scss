@@ -1,0 +1,173 @@
+.btn-find {
+  background: $secondary-color;
+  border-radius: $default-radius;
+  color: $white;
+  font-size: $f14px;
+  letter-spacing: 2px;
+  padding: 14px 55px;
+  margin: 0 auto;
+  white-space: nowrap;
+  transition: all $default-transition;
+  @extend .dib;
+  @extend .up;
+
+  &:hover {
+    background: $primary-color;
+    color: $white;
+    transition: background $default-transition
+  }
+  &:focus {
+    color: $white;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+//Sor button
+.btn-list {
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  width: 135px;
+  padding: 6px;
+  color: $primary-color;
+  font-size: $f16px;
+  letter-spacing: 0.5px;
+  font-weight: $medium;
+  transition: all $default-transition;
+  line-height: 1;
+
+  &:hover{
+    background: $secondary-color;
+    border: 1px solid $secondary-color;
+    color: $white;
+    transition: all $default-transition;
+    box-shadow:none;
+  }
+  &:focus{
+    outline: 0!important;
+  }
+  &.active {
+    background: $primary-color;
+    color: $white;
+    transition: all $default-transition;
+    box-shadow:none;
+  }
+
+}
+
+  //Back to top
+.goto-top {
+  //background: $primary-color;
+  border-radius: 50%;
+  box-shadow: 2px 3px 8px 0 rgba($black ,0.25);
+  height: 50px;
+  width: 50px;
+
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s 0s, visibility 0s .3s;
+
+  z-index: 9999;
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+
+  @extend .db;
+
+}
+.goto-top.goto-is-visible,
+.goto-top.cd-fade-out,
+.no-touch .goto-top:hover {
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.goto-top.goto-is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.goto-top.cd-fade-out {
+  opacity: .5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+.no-touch .goto-top:hover {
+  //background-color: $primary-color;
+  opacity: 1;
+}
+
+//Pagination
+.pagination {
+  display: inline-block;
+  margin: 20px 0;
+  border-radius: 4px;
+  padding: 5px;
+  background: $white;
+
+  li{
+    a{
+      padding: 4px 11px;
+      line-height: 1.42857143;
+      color: #a0a0a0;
+      background-color: #fff;
+      border: 0;
+      border-radius: 4px;
+      margin: 0 4px;
+    }
+    span{
+      padding: 4px 11px;
+      line-height: 1.42857143;
+      color: #a0a0a0;
+      background-color: $white;
+      border: 0;
+      border-radius: 4px;
+      margin: 0 4px;
+    }
+  }
+
+  &>.active>a,
+  &>.active>a:focus,
+  &>.active>a:hover,
+  &>.active>span,
+  &>.active>span:focus,
+  &>.active>span:hover {
+    z-index: 2;
+    color: $white;
+    cursor: default;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    transition: all $default-transition;
+  }
+
+  &>li>a:focus,
+  &>li>a:hover,
+  &>li>span:focus,
+  &>li>span:hover {
+    z-index: 3;
+    color: $primary-color;
+    background-color:$light-gray;
+    border-color: $light-gray;
+    transition: all $default-transition;
+  }
+}
+
+//Responsive - Links
+@media screen and (min-width: 0) and (max-width: #{$screen-sm-max} ) {
+  // --- Default
+
+}
+@media screen and (min-width: #{$screen-sm-min} ) and (max-width: #{$screen-sm-max} ) {
+
+}
+
+//Responsive - Back to top
+@media screen and (min-width: 0) and (max-width: #{$screen-xs-max} ) {
+  .goto-top {
+    width: 35px;
+    height: 35px;
+
+    bottom: 2.5%;
+    right: 5%;
+  }
+}
